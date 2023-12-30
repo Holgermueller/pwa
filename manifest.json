@@ -1,0 +1,16 @@
+{
+  "name": "Science Fiction Name Generator",
+  "short_name": "SFNameGenerator",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "",
+  "theme_color": "",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images",
+      "type": "image/png",
+      "sizes": "72x72"
+    }
+  ]
+}
