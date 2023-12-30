@@ -8,28 +8,77 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link type="text/css" rel="stylesheet" href="public/style.css" />
     <script type="text/javascript" src="/js/materialize.min.js"></script>
-    <title>PWA</title>
+    <link rel="manifest" href="/manifest.json" />
+    <title>SciFiNameGenerator</title>
   </head>
-  <body class="grey lighten-4">
+  <body>
     <header>
-      <h1>PWA</h1>
+      <h1>SFNG</h1>
+      <strong>(Sci Fi Name Generator)</strong>
     </header>
 
-    <nav class="z-depth-0">
-      <div class="nav-wrapper container">
-        <a href="/">
-          Food
-          <span>Ninja</span>
-        </a>
-        <span class="right grey-text text-darken-1">
-          <i class="material-icons sidenav-trigger" data-target="side-menu"
-            >menu</i
-          >
-        </span>
+    <main>
+      <div class="name-holder">
+        <h2 class="name-display" id="nameDisplay"></h2>
       </div>
-    </nav>
+
+      <div class="buttons-array">
+        <button onclick="chooseConsonant()">Add a consonant</button>
+
+        <button onclick="chooseVowel()">Add a vowel</button>
+
+        <button onclick="chooseNumber()">Add a number</button>
+
+        <button onclick="addDash()">Add a dash</button>
+
+        <button onclick="deleteLetter()">Delete last character</button>
+
+        <button onclick="clearWord()">Clear word</button>
+      </div>
+    </main>
+
+    <section class="about-button-section">
+      <button class="about-button" id="modalButton" onclick="showModal()">
+        About
+      </button>
+    </section>
+
+    <div class="modal" id="myModal">
+      <div class="modal-content">
+        <p class="modal-text">
+          Hello, Esteemed Internet Wanderer, and welcome to the
+          <strong>Sci Fi Name Generator!</strong>
+        </p>
+        <p>
+          It pulls random letters, numbers, and one special character from a few
+          arrays and concatonates them into a word on the DOM. The user also has
+          the option to remove the last character or deleting the entire word
+          and starting over.
+        </p>
+        <p>
+          If you'd like to know some more about it, not that's there's much more
+          to know, you can check out the repo here:
+          <a
+            target="_blank"
+            class="repo-link"
+            href="https://github.com/Holgermueller/sfnamegenerator"
+            >REPO</a
+          >
+        </p>
+
+        <span onclick="hideModal()" id="span" class="close">CLOSE</span>
+      </div>
+    </div>
+
+    <footer>
+      Copyright &copy;2023 - <span id="year"></span> Holger Mueller
+    </footer>
 
     <script src="js/ui.js"></script>
   </body>
